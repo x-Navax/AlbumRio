@@ -23,6 +23,11 @@ header {
     border: solid black 1px;
     
 }
+.hasgtag {
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
 .titulo, .subtitulo {
     position: relative;
     margin-top: 40px;
@@ -45,6 +50,7 @@ header {
     margin-top:140px ;
     margin-left: 10px;
     margin-right: 10px;
+    margin-bottom: 80px;
     
    
 }
@@ -81,7 +87,7 @@ footer {
 }
 
 .telegram {
-     font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Bebas Neue', sans-serif;
     font-size: 2rem;
 }
 
@@ -95,12 +101,17 @@ footer {
    
 }
 .redes span {
-    margin: 0 -300px;
+    margin: 0 -15%;
     margin-top: 3px;
 }
 .redes .telegramimg img {
     margin-left: -200px; 
 }
+.redestelefono {
+    display: none;
+}
+
+
 
 @media (max-width: 768px) {
     header {
@@ -130,18 +141,35 @@ footer {
         margin-left: 5px; /* Ajustar márgenes izquierdo y derecho */
         margin-right: 8px;
         gap: 20px;
+        margin-bottom:65px;
     }
 
-    .arroba, .telegram {
-        font-size: 1rem; /* Ajustar el tamaño del texto */
-        margin-right: -50px; /* Ajustar el margen derecho */
+   .redes {
+    display: none;
+   }
+
+   .redestelefono {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    
+   }
+
+   .redestelefono span {
+    margin: 0 5px;
+   }
+
+ 
+   .redestelefono span a img {
+    width: 2.5rem;
+    
+    }
+    .redestelefono p {
+        font-family: 'Bebas Neue', sans-serif;
+       
     }
 
-    .redes span {
-        margin: 0 -150px; /* Ajustar el margen para las imágenes */
-    }
-
-    .redes .telegramimg img {
-        margin-left: -150px; /* Ajustar el margen izquierdo de la imagen telegram */
-    }
+   
 }
