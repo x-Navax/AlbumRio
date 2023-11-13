@@ -1,0 +1,147 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body {
+    background-image: url("./imagenes/fondo.jpg");
+    background-size: cover; /* Ajusta la imagen para cubrir todo el contenedor */
+    background-attachment: fixed;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    z-index: 1000;
+    background-image: url("./imagenes/fondoheader.png");
+    background-size: cover;
+    border: solid black 1px;
+    
+}
+.titulo, .subtitulo {
+    position: relative;
+    margin-top: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    color: rgb(232, 226, 170);
+    text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+    letter-spacing: 2.5px;
+}
+
+.logorio {
+    width: 8rem;
+    height: 8rem;
+    margin-top: -10px;
+}
+#imageContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Columnas automáticas con un ancho mínimo de 200px */
+    gap: 50px; /* Espacio entre las imágenes */
+    margin-top:140px ;
+    margin-left: 10px;
+    margin-right: 10px;
+    
+   
+}
+
+
+#imageContainer img {
+    width: 100%; 
+    height: auto; 
+    border: solid black 2px;
+}
+
+#imageContainer a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: black;
+}
+
+footer {
+    width: 100%;
+    background-image: url("./imagenes/fondoheader.png");
+    background-size: cover;
+    position:fixed;
+    z-index: 1000;
+    bottom:0px;
+    border: solid black 1px;
+}
+
+.arroba {
+    margin-left: 40px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+   margin-right: -200px;
+}
+
+.telegram {
+     font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+}
+
+.redes{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+.redes span a img {
+    width: 3rem;
+   
+}
+.redes span {
+    margin: 0 -300px;
+    margin-top: 3px;
+}
+.redes .telegramimg img {
+    margin-left: -200px; 
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 85px; /* Reducir la altura del encabezado para pantallas más pequeñas */
+    }
+
+    .titulo, .subtitulo {
+        font-size: 1.5rem; /* Reducir el tamaño del texto en pantallas más pequeñas */
+        margin-top: 12px; /* Ajustar el margen superior */
+        text-align: center;
+    }
+
+    .titulo {
+        margin-left: -4px;
+    }
+
+    .logorio {
+        width: 6rem; /* Reducir el tamaño del logo en pantallas más pequeñas */
+        height: 6rem;
+        margin-top: -10px; /* Ajustar el margen superior */
+        margin-left: -12px;
+    }
+
+    #imageContainer {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+        margin-top: 100px; /* Ajustar el margen superior */
+        margin-left: 5px; /* Ajustar márgenes izquierdo y derecho */
+        margin-right: 8px;
+        gap: 20px;
+    }
+
+    .arroba, .telegram {
+        font-size: 1rem; /* Ajustar el tamaño del texto */
+        margin-right: -50px; /* Ajustar el margen derecho */
+    }
+
+    .redes span {
+        margin: 0 -150px; /* Ajustar el margen para las imágenes */
+    }
+
+    .redes .telegramimg img {
+        margin-left: -150px; /* Ajustar el margen izquierdo de la imagen telegram */
+    }
+}
