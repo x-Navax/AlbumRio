@@ -18,25 +18,25 @@ function listFiles() {
       var files = response.result.files;
       var imageContainer = document.getElementById('imageContainer');
       if (files && files.length > 0) {
-          files.forEach(function(file) {
-              var img = document.createElement('img');
-              img.src = file.webContentLink;
-              img.alt = file.name;
+        files.forEach(function(file) {
+            var img = document.createElement('img');
+            img.src = file.webContentLink;
+            img.alt = file.name;
 
-              var downloadButton = document.createElement('a');
-              downloadButton.textContent = 'Descargar';
-              downloadButton.setAttribute('href', file.webViewLink); // Enlace a la vista en Drive
-              downloadButton.setAttribute('target', '_blank'); // Abre el enlace en una nueva pestaña
-              downloadButton.setAttribute('download', file.name); // Agrega atributo de descarga
+            var downloadButton = document.createElement('a');
+            downloadButton.textContent = 'Descargar';
+            downloadButton.href = file.webContentLink; // Enlace directo al archivo
+            downloadButton.download = file.name; // Nombre de archivo para la descarga
+            downloadButton.setAttribute('target', '_blank'); // Abre el enlace en una nueva pestaña
 
-              var imageWrapper = document.createElement('div');
-              imageWrapper.appendChild(img);
-              imageWrapper.appendChild(downloadButton);
+            var imageWrapper = document.createElement('div');
+            imageWrapper.appendChild(img);
+            imageWrapper.appendChild(downloadButton);
 
-              imageContainer.appendChild(imageWrapper);
-          });
-      } else {
-          console.log('No se encontraron archivos.');
+            imageContainer.appendChild(imageWrapper);
+        });
+    } else {
+        console.log('No se encontraron archivos.');
       }
   });
 }
