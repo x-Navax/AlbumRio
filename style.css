@@ -34,11 +34,15 @@ header {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 2rem;
     color: rgb(232, 226, 170);
-    text-shadow: 1px 1px 0 black, -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black;
+    text-shadow:
+    1px 1px 2px black,
+    0 0 1em rgba(255, 234, 0, 0.319),
+    0 0 0.2em rgba(255, 234, 0, 0.285);
+  color: white;
     letter-spacing: 2.5px;
 }
 
-.logorio {
+.logorio { 
     width: 8rem;
     height: 8rem;
     margin-top: -10px;
